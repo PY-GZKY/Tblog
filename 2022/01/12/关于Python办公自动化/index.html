@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="baidu-site-verification" content="1EB8XoOl0C"><meta name="google-site-verification" content="K7thEgdLm0UfRWJ5MGdF7sCcjClSzAlxFLPv2Oz5CGM"><title> 关于Python办公自动化须知 · T计划</title><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="关于Python办公自动化须知 - WT"><meta name="keywords" content="Python、办公自动化"><meta name="author" content="WT"><link rel="short icon" href="/images/favicon.ico"><link rel="stylesheet" href="/css/bubuzou.css"><link rel="search" type="application/opensearchdescription+xml" href="https://blog.tplan.cc/atom.xml" title="T计划"><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="T计划" type="application/atom+xml">
+</head><body><header><div class="header row"> <a href="/" class="logo-link"><img src="/images/favicon.png"></a><ul id="nav_list" class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" data-hover="文章" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" data-hover="归档" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/life/" target="_self" data-hover="生活" class="nav-list-link">生活</a></li><li class="nav-list-item"><a href="/i/" target="_self" data-hover="图集" class="nav-list-link">图集</a></li><li class="nav-list-item"><a href="/youl/" target="_self" data-hover="伙伴" class="nav-list-link">伙伴</a></li><li class="nav-list-item"><a href="/about/" target="_self" data-hover="关于" class="nav-list-link">关于</a></li></ul><div class="search"><a id="search_btn" href="#search"></a></div><div id="nav_btn" class="nav-btn"><span></span><span></span><span></span></div></div></header><div class="row scroll-con"><section class="container"><!-- for archive page--><div id="postAr" class="post"><article class="post-block"><h1 class="post-title">关于Python办公自动化须知</h1><div class="post-info">2022-01-12<p class="visit"><i data-identity="2022/01/12/关于Python办公自动化/" class="article-timer"></i><span>次访问</span></p><a target="_blank" title="办公自动化" class="post-from">办公自动化</a><a target="_blank" title="Python" class="post-demo">Python</a></div><div class="post-content"><h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a><code>操作系统</code></h3><p>本教程 <a target="_blank" rel="noopener" href="https://python-automation.docs.tplan.cc/#/">Python办公自动化</a> 环境基于 <code>Windows</code> 环境，笔者认为 <code>Linux</code> 并不适合作为 <code>Python</code> 自动化的操作平台，至少不是自动化操作最好的系统，<code>Windows</code> 系统使用用户居三个操作系统之首，受众面广，软件兼容性较强，可视化操作相比 <code>Linux</code> 系统简单易用得多，这也是受普遍大量用户青睐的重要原因。</p>
+<span id="more"></span>
+
+<p>当然 <code>Mac</code> 系统的交互性和美观性不在 <code>Windows</code> 之下，但就如上面所说的，受众面不够广，<code>10</code>个人里大概有 <code>7</code>个人使用 <code>Windows</code> 系统，<code>2</code>个人使用 <code>Mac</code> 系统，还有<code>1</code>个人使用 <code>Linux</code> 系统，当然<code>Mac</code>系统使用的也是基于 <code>Unix</code> 的内核，这里不做详细对比。</p>
+<h3 id="认识Python"><a href="#认识Python" class="headerlink" title="认识Python"></a>认识<code>Python</code></h3><p><code>Python</code> 是一种易于学习又功能强大的编程语言。它提供了高效的高级数据结构，还能简单有效地面向对象编程。<code>Python</code> 优雅的语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的理想语言。</p>
+<p><code>Python</code> 解释器易于扩展，可以使用 <code>C</code> 或 <code>C++</code>（或者其他可以通过 <code>C</code> 调用的语言）扩展新的功能和数据类型。<code>Python</code> 也可用于可定制化软件中的扩展程序语言。</p>
+<p>目前<code>Python</code>分为多版本，<code>Python2</code> 已宣布不在维护，虽然信奉 <code>Python2</code> 的人还不在少数，但我还是建议你使用<code>Python3</code>(3.6以上版本)。</p>
+<h3 id="你需要学习什么"><a href="#你需要学习什么" class="headerlink" title="你需要学习什么"></a><code>你需要学习什么</code></h3><ul>
+<li><code>Python</code>集成和开发环境</li>
+<li>数据结构</li>
+<li>语言基础</li>
+<li>常用关键字</li>
+<li>自动化相关库操作</li>
+<li>爬虫 (视情况而定)</li>
+</ul>
+<h3 id="RPA工具"><a href="#RPA工具" class="headerlink" title="RPA工具"></a><code>RPA</code>工具</h3><p><code>Python</code>对于自动化来说确实是一把利刃，但是有一定的开发门槛。</p>
+<p>而<code>RPA</code>软件则是把这个脚本代码流程转换成了流程化、拖拽式的操作，一般而言，在代码中实现的一些语言结构上的东西都能用<code>RPA</code>工具来编写。</p>
+<p>这是流程化操作层面的，当然绝大多数的<code>RPA</code>软件也支持编码模式，只是支持编码的语言不尽相同，有的支持.Net编程，有的支持<code>Python</code>编程，还有一些自定义的逻辑语言。这也是当下自动化工具和编程语言结合的一种工作模式，自动化流程完成不了的用编码填补，或是控件自动化流程过长，则用编码代替。</p>
+<p>国内外 <code>rpa</code> 软件比比皆是，国外的 <code>rpa</code> 代表有 <code>AA</code>,<code>UIPATH</code>, 国内有 <code>uibot</code>，<code>影刀rpa</code>，<code>阿里rpa</code>, <code>一赛奇</code>等等……</p>
+<p>其中<code>AA</code>和<code>UIPATH</code>是老国外相对较老的平台了，这里不做比较，国内软件从稳定性来看当属<code>影刀rpa</code>，<code>uibot</code>虽然功能齐全但欠缺稳定性，<code>阿里rpa</code> 虽然也支持了<code>Python扩展</code>但是产品的迭代出现了问题。</p>
+<p>而影刀作为新生代的 <code>rpa</code> 解决了前面几个软件的弊端，不仅功能齐全，界面美观度高，还支持多机器人应用，<code>Python</code> 扩展以及第三方插件，灵活度较高。当然影刀集成的这一套 <code>rpa</code> 流程化应用和服务，主要面向企业应用，体验版本是免费的，但是功能首先，个人版约 2500/年，功能齐全但是没有控制台统一调度和配置，无法享受专业化的售后定制服务，目前企业版没有明码标价，需要联系影刀官方洽谈。</p>
+<p>选择<code>影刀rpa</code> 很大程度上是因为它采用了 <code>Python</code> 引擎作为扩展，而 <code>Python</code> 在自动化处理方面正发挥着强大的威力！！！！</p>
+<p>国内的<code>影刀</code>，<code>阿里RPA</code>都支持<code>Python扩展</code>，并且可以在应用时配合使用，控件和编码的连线，让自动化省去了更多的障碍。</p>
+<blockquote>
+<p>可惜这里<code>影刀</code>和<code>阿里RPA</code> 并没有给我赞助，所以就不铺开谈了 …..</p>
+</blockquote>
+<h3 id="关于现状"><a href="#关于现状" class="headerlink" title="关于现状"></a><code>关于现状</code></h3><p>现在不少针对 <code>Python</code> 语言的一些诟病都是从其<code>运行速度</code>和<code>性能</code>开始的。</p>
+<p>抛开动态语言的编译和运行速度不谈，在日常的应用中，除了这些<code>Python</code>公认的通病之外，你是否真正的把这门语言用到了极致。</p>
+<p>很少吧，我们日常使用可能只是用到了 <code>Python</code>的冰山一角，因为这足以应付我们的日常工作，特别是对于<code>自动化办公</code>，你可能不会深入去理解 <code>Python</code> 的一些<code>高阶用法</code>，<code>装饰器</code>、<code>闭包</code>、<code>元类</code>、<code>子类继承</code>、<code>多态</code>以及各种<code>设计模式</code>等等。</p>
+<p>实话实说，现在不少的<code>初级工程师</code>也仅仅是在模块中实现一些简单明了的类示例，配合各种第三方库用起来也是无比的顺手，更重要的是保住了头发，这何乐而不为？</p>
+<h3 id="关于效率"><a href="#关于效率" class="headerlink" title="关于效率"></a><code>关于效率</code></h3><p>如果你不再是一个新手，或者不想在外人看来像一个新手，你可能需要接触一些你日常代码之外的东西(<code>Python</code>之强远不止于此)。</p>
+<p>如果你刚接触 <code>Python</code> 不久，那么你可能会使用诸如 <code>int</code>、 <code>str</code>、<code>list</code>、 <code>dict</code>、 <code>元组</code>、 <code>数组</code>等一些 <code>Python</code> 内置的基础<code>数据结构</code>，这很好。</p>
+<p><code>Python</code> 的强大之处就在于简单的命令能让你看到一些不可思议的效果，一个 <code>list</code> 类型再加上一个 <code>dict</code> 类型能打下半边天，这也使得很多的初学者不愿意花更多的时间去深入了解一些底层的实现原理(<code>源码</code>、<code>算法结构</code>)，当然这不是必须的，况且对于很多的初学者来说，<code>Python</code>也只不过是工作中诸多工具中的一种，对的，<code>工具</code>。</p>
+<p>但是如果你想让日常开发的代码更为<code>健壮</code>和<code>简洁</code>(<code>简洁即优美</code>不是吗)，那就需要尝试着去了解一些<code>Python</code>的高阶用法，就算仅仅是为了代码优化、提升运行效率，我也建议你能多去了解了解。</p>
+<p>本教程注重实战，其中大部分代码也是笔者在日常工作中经常使用的，或经过反复验证的。</p>
+<p>我希望通过大量通用的实例来帮助读者进行有效的实践，感受到 <code>Python</code> 为自动化办公带来的便利和效率。</p>
+<p>毋庸置疑的是，<code>Python</code> 仍然是<code>自动化办公</code>中的首选语言，对，<code>首选</code>。</p>
+<blockquote>
+<p>本文来源：<a href="https://blog.tplan.cc/">T计划</a><br>版权声明：本文采用 知识共享 署名-非商业性使用-禁止演绎(CC BY-NC-ND)国际许可协议 进行许可</p>
+</blockquote>
+</div></article></div><div class="right-container"><div class="widget"><div id="arAnchorBar"></div></div></div></section></div><div class="right-menu"></div><div class="modal search-modal"><div class="input-field"><input type="text" id="search_input"><label for="search-input">搜索</label></div><div id="search_result" class="search-result"></div></div><div class="blog-overlay"></div><footer class="row"><div class="footer-con"><div class="paginator"><a href="/2022/01/17/%E6%9D%BE%E9%9D%99%E5%8C%80%E4%B9%90/" title="松静匀乐" class="prev">上一篇</a><a href="/2022/01/12/%E6%80%9D%E7%BB%B4%E9%87%8D%E7%BB%84/" title="思维重组" class="next">下一篇</a></div><a href="#comment" class="comment-anchor"></a><div id="vcomments"></div><script>new Valine({
+    el: "#vcomments",
+    appId: "57HzoSWoa39Fs6z4zhbQ8rsu-gzGzoHsz",
+    appKey: "VqwKDqnv8xHuqGxDcgLznrTr",
+    notify: false,
+    verify: false,
+    avatar: "robohash",
+    visitor: true,
+    placeholder: "随便说点什么～.～",
+});</script><div class="copyright"><p>© 2022 <a target="_blank">WT</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <br> and <a href="https://github.com/Bulandent/hexo-theme-bubuzou" target="_blank">bubuzou</a></p><p> <span style="padding-right: 6px;"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2021173696号-1</a> </span></p></div><div class="totop"><i></i></div></div></footer><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/jquery-1.8.2.min.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/articleCatalog.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/main.js"></script><script>var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?134c63b82523c74b6918178f08829cb2"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();</script><script>const valineAPI = (() => {
+try {
+    AV.init("57HzoSWoa39Fs6z4zhbQ8rsu-gzGzoHsz", "VqwKDqnv8xHuqGxDcgLznrTr");
+} catch(error) {}
+const isExist = (identity) => {
+    identity = identity || getRealPath();
+    let query = new AV.Query('Timer');
+    return new Promise((resolve, reject) => {
+    query.equalTo("identity", identity);
+    query.find().then(results => {
+        resolve(results.length > 0);
+    }, error => reject(error));
+    })
+}
+
+const _get = (identity) => {
+    let query = null;
+    if(identity && identity instanceof Array){
+    let querys = [];
+    for(let i = 0; i < identity.length; ++i) {
+        querys[i] = new AV.Query('Timer');
+        querys[i].equalTo('identity', identity[i]);
+    }
+    query = AV.Query.or.apply(null ,querys);
+    } else {
+    identity = identity || getRealPath();
+    query = new AV.Query("Timer");
+    query.equalTo("identity", identity);
+    }
+
+    return new Promise((resolve, reject) => {
+    query.find()
+    .then(results => resolve(results))
+    .catch(error => reject(error))
+    })
+}
+
+const create = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let Todo = AV.Object.extend('Timer');
+    let todo = new Todo();
+    todo.set("times", 1);
+    todo.set("identity", identity);
+    todo.save().then(res => resolve(true), error => reject(error));
+    })
+}
+
+const update = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let query = new AV.Query('Timer');
+    query.equalTo("identity", identity);
+    query.find().then(todos => {
+        todos.forEach(todo => {
+        todo.set("times", todo.attributes.times + 1);
+        });
+        return AV.Object.saveAll(todos);
+    }).then(todos => resolve(true), error => reject(error));
+    })
+}
+
+return {
+    isExist,
+    _get,
+    update,
+    create
+}
+})()
+
+const calcAndWriteTimes = () => {
+let isPost = true;
+
+let timerAllDOM = document.querySelectorAll(".article-timer");
+
+if(isPost) {
+    let identity = timerAllDOM[0].getAttribute("data-identity");
+    valineAPI.isExist(identity)
+    .then(exist => {
+    if(exist) {
+        return valineAPI.update(identity);
+    }
+    return new Promise(resolve => resolve(true));
+    })
+    .then( succuess => valineAPI._get(identity))
+    .then( result => timerAllDOM[0].innerText = result[0].attributes.times)
+    .catch(error => console.log(error.message))
+    return ;
+}
+
+let timerDOMCache = {};
+
+for(let timerDOM of timerAllDOM) {
+    let identity = timerDOM.getAttribute("data-identity");
+    if(timerDOMCache.hasOwnProperty(identity)){
+    timerDOMCache[identity].dom.push(timerDOM);
+    }else{
+    timerDOMCache[identity] = {
+        dom: [timerDOM],
+        times: undefined
+    };
+    }
+}
+
+let identities = Object.keys(timerDOMCache);
+valineAPI._get(identities).then(results => {
+    for(let result of results) {
+    let {identity, times} = result.attributes;
+    timerDOMCache[identity].times = times;
+    timerDOMCache[identity].dom.map(item => item.innerText = times);
+    }
+    for(let identity of identities) {
+    if(timerDOMCache[identity].times){
+        continue;
+    }
+    timerDOMCache[identity].dom.map(item => item.innerText = 1);
+    valineAPI.create(identity);
+    }
+}).catch(error => console.log(error.message))
+}
+
+if(true){
+calcAndWriteTimes();
+}</script></body></html>

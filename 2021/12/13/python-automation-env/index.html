@@ -1,0 +1,234 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="baidu-site-verification" content="1EB8XoOl0C"><meta name="google-site-verification" content="K7thEgdLm0UfRWJ5MGdF7sCcjClSzAlxFLPv2Oz5CGM"><title> Python 自动化之环境搭建 · T计划</title><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Python 自动化之环境搭建 - WT"><meta name="keywords" content="Python、自动化"><meta name="author" content="WT"><link rel="short icon" href="/images/favicon.ico"><link rel="stylesheet" href="/css/bubuzou.css"><link rel="search" type="application/opensearchdescription+xml" href="https://blog.tplan.cc/atom.xml" title="T计划"><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="T计划" type="application/atom+xml">
+</head><body><header><div class="header row"> <a href="/" class="logo-link"><img src="/images/favicon.png"></a><ul id="nav_list" class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" data-hover="文章" class="nav-list-link">文章</a></li><li class="nav-list-item"><a href="/archives/" target="_self" data-hover="归档" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/life/" target="_self" data-hover="生活" class="nav-list-link">生活</a></li><li class="nav-list-item"><a href="/i/" target="_self" data-hover="图集" class="nav-list-link">图集</a></li><li class="nav-list-item"><a href="/youl/" target="_self" data-hover="伙伴" class="nav-list-link">伙伴</a></li><li class="nav-list-item"><a href="/about/" target="_self" data-hover="关于" class="nav-list-link">关于</a></li></ul><div class="search"><a id="search_btn" href="#search"></a></div><div id="nav_btn" class="nav-btn"><span></span><span></span><span></span></div></div></header><div class="row scroll-con"><section class="container"><!-- for archive page--><div id="postAr" class="post"><article class="post-block"><h1 class="post-title">Python 自动化之环境搭建</h1><div class="post-info">2021-12-13<p class="visit"><i data-identity="2021/12/13/python-automation-env/" class="article-timer"></i><span>次访问</span></p><a target="_blank" title="自动化" class="post-from">自动化</a><a target="_blank" title="Python" class="post-demo">Python</a></div><div class="post-content"><h2 id="安装-Python"><a href="#安装-Python" class="headerlink" title="安装 Python"></a>安装 <code>Python</code></h2><p>基于 <code>Anaconda</code> 搭建 <code>Python</code> 环境</p>
+<h3 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装<code>Anaconda</code></h3><p>不管是<code>Windows</code>或<code>Linux(Mac)</code> 系统都推荐使用<code>Anaconda</code>搭建<code>Python</code>环境，这是一个绝佳的选择。</p>
+<p><code>Windows</code> 下安装 <code>Anaconda</code> 看起来只需要傻瓜式操作，最后再把它放入环境变量即可，这里不在详述 :smile:</p>
+<span id="more"></span>
+
+<h3 id="Linux-下安装Anaconda"><a href="#Linux-下安装Anaconda" class="headerlink" title="Linux 下安装Anaconda"></a><code>Linux</code> 下安装<code>Anaconda</code></h3><p>这里以<code>Centos7</code>为例</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> yum update &amp;&amp;</span></span><br><span class="line">  yum -y install wget &amp;&amp;</span><br><span class="line">  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh &amp;&amp;</span><br><span class="line">  bash ./Miniconda3-latest-Linux-x86_64.sh</span><br></pre></td></tr></table></figure>
+
+<p>由于某些原因，默认的<code>anaconda</code> 站点<code>wget</code>可能会比较慢，可以选择国内的镜像源平台进行安装，比如清华源就很优秀。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/">清华镜像站</a></p>
+</blockquote>
+<p>选择你适应的平台和系统版本，<code>wget</code> 下载至本地即可。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> wget https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2019.03-Linux-x86_64.sh</span></span><br></pre></td></tr></table></figure>
+
+<p>至于安装步骤，一路按确认键即可，配置环境变量并让它生效</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure>
+<p>在文件最尾端加入一下路径，比如我把安装目录放在了 <code>root</code> 下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PATH=$PATH:/root/anaconda3/bin</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">source</span> /etc/profile</span></span><br></pre></td></tr></table></figure>
+
+<p>查看当前的 Python 环境</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@gzky_gz ~] conda --version</span><br><span class="line">conda 4.9.2</span><br><span class="line">[root@gzky_gz ~] python</span><br><span class="line">Python 3.7.9 (default, Aug 31 2020, 12:42:55) </span><br><span class="line">[GCC 7.3.0] :: Anaconda, Inc. on linux</span><br><span class="line">Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>至此，Anaconda安装完毕 ！！</p>
+</blockquote>
+<h3 id="pip-包管理工具"><a href="#pip-包管理工具" class="headerlink" title="pip 包管理工具"></a><code>pip</code> 包管理工具</h3><p>我们使用 <code>pip</code> 作为<code>Python</code>的包管理工具，安装 <code>anaconda</code> 完毕之后，我们<br>可以在黑窗口中键入<br><code>pip -V</code> 来查看 pip 版本</p>
+<h2 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h2><p>在 Python 中，我们可以通过 pip 工具进行第三方库的安装，这也是最快、最简单的安装方式。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyMysql</span><br></pre></td></tr></table></figure>
+
+<p>但是由于一些第三方扩展存放于海外服务器，由于众所周知的原因我们无法通过正常手段获取，可以使用 -i 参数<br>指定源，加速安装扩展库:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install PyMysql -i https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+
+<h2 id="Python-虚拟环境"><a href="#Python-虚拟环境" class="headerlink" title="Python 虚拟环境"></a><code>Python</code> 虚拟环境</h2><p>成功安装 <code>Python</code> 之后默认只提供一个版本，比如 <code>Python3.7</code></p>
+<blockquote>
+<p>这对于习惯切换多版本开发的小伙伴可就不太友好了 ！！</p>
+</blockquote>
+<p>所以，为了兼容不同<code>Python</code>版本共同开发，我们需要使用 <code>Python</code> 虚拟环境</p>
+<p>由于我们前面是使用 <code>conda</code> 搭建的 <code>Python</code> 环境，而 <code>conda</code> 也提供了 <code>Python</code>的虚拟环境，可以切换到不同的<code>Python</code><br>版本进行开发，不同版本之间相互隔离，是一个独立的操作环境 ！！</p>
+<p>这里假设读者本地默认安装了 <code>Python3.7</code> 版本</p>
+<h3 id="创建一个新的虚拟环境"><a href="#创建一个新的虚拟环境" class="headerlink" title="创建一个新的虚拟环境"></a>创建一个新的虚拟环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Python 3.6</span>  </span><br><span class="line"><span class="meta">$</span><span class="bash"> conda create -n venv_3.6 python=3.6</span>   </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Python 3.8</span> </span><br><span class="line"><span class="meta">$</span><span class="bash"> conda create -n venv_3.8 python=3.8</span></span><br></pre></td></tr></table></figure>
+
+<p>其中 <code>-n</code> 指定了虚拟环境的名称，可以随便起，后面跟着 <code>Python</code> 和指定<code>版本号</code></p>
+<p>查看创建的虚拟环境列表</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash"> conda env list</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> conda environments:</span></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br><span class="line"><span class="bash">base                  *  D:\conda3</span></span><br><span class="line">venv_3.6                 D:\conda3\envs\venv_3.6</span><br><span class="line">venv_3.8                 D:\conda3\envs\venv_3.8</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可以看到刚才创建的环境已经有了</p>
+</blockquote>
+<h3 id="激活并进入虚拟环境"><a href="#激活并进入虚拟环境" class="headerlink" title="激活并进入虚拟环境"></a>激活并进入虚拟环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Linux:   source activate venv</span><br><span class="line">Windows: activate venv</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-pipenv"><a href="#安装-pipenv" class="headerlink" title="安装 pipenv"></a>安装 <code>pipenv</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pipenv</span><br></pre></td></tr></table></figure>
+
+<p>进入新的虚拟环境会发现很多第三方工具和扩展包需要重新安装，比如 <code>PyMysql</code> 等等</p>
+<p>想往常一样执行 <code>pip install pymysql</code> 安装第三方扩展即可</p>
+<h3 id="删除一个现有的虚拟环境"><a href="#删除一个现有的虚拟环境" class="headerlink" title="删除一个现有的虚拟环境"></a>删除一个现有的虚拟环境</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 将清空所有</span></span><br><span class="line">conda remove --name venv --all </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意，如果是<code>Pycharm</code>编辑器的话可以将设置中的项目控制中的<code>Python</code>解释器路径更改为 <code>venv</code> 的路径，更改生效后，这就意味着你已经进入了新的<code>Python</code>版本环境</p>
+</blockquote>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>在 <code>Python</code> 中我们推荐使用 <code>Pycharm</code> 编辑器来进行代码开发，这也是现在最主流的<code>Python</code> 编辑器了。</p>
+<p>如果你经常和数据表格打交道，我强烈建议你使用 <code>Jupyter NoteBook</code>。</p>
+<h2 id="Node-Npm"><a href="#Node-Npm" class="headerlink" title="Node | Npm"></a><code>Node</code> | <code>Npm</code></h2><blockquote>
+<p><code>nodejs</code>： <a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download</a></p>
+</blockquote>
+<p>这里主要说说 <code>Linux</code> 下如何安装 <code>Node</code> 和 <code>Npm</code>，<code>windows</code> 安装 <code>node</code> 不再赘述。</p>
+<ul>
+<li><p>进入官方下载页面后，根据自己系统选择 <code>Linux Binaries (x64)</code> 或 <code>Linux Binaries (ARM)</code>，我这里是<br><code>Linux Binaries (x64)</code>，下载到本地后<code>解压</code>即可。</p>
+</li>
+<li><p><code>Linux</code> 一般的软件存放目录是 <code>/opt</code>，我们把它存在这里。</p>
+</li>
+<li><p>软链接到 <code>/usr/local/bin/</code> 目录，为了能够全局作用与 <code>node</code> 和 <code>npm</code>，我们还需要将其软链接到 <code>/usr/local/bin/</code> 目录</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /opt/node/bin/node /usr/local/bin/node</span><br><span class="line">sudo ln -s /opt/node/bin/npm /usr/local/bin/npm</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果<code>软链接</code>不可用或失效，可以直接将 <code>/opt/node</code> 加入到环境变量中</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>添加至最后一行即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/opt/node/bin</span><br></pre></td></tr></table></figure>
+
+<p>生效</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+
+<p>验证，查看版本信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -V</span><br><span class="line">npm -V</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>OK, 来到这就差不多够用了。</p>
+</blockquote>
+<br>
+
+<blockquote>
+<p>本文作者：T计划<br>版权声明：本文采用 知识共享 署名-非商业性使用-禁止演绎(CC BY-NC-ND)国际许可协议 进行许可</p>
+</blockquote>
+</div></article></div><div class="right-container"><div class="widget"><div id="arAnchorBar"></div></div></div></section></div><div class="right-menu"></div><div class="modal search-modal"><div class="input-field"><input type="text" id="search_input"><label for="search-input">搜索</label></div><div id="search_result" class="search-result"></div></div><div class="blog-overlay"></div><footer class="row"><div class="footer-con"><div class="paginator"><a href="/2021/12/13/python-automation-sql/" title="Python 自动化之数据库" class="prev">上一篇</a></div><a href="#comment" class="comment-anchor"></a><div id="vcomments"></div><script>new Valine({
+    el: "#vcomments",
+    appId: "57HzoSWoa39Fs6z4zhbQ8rsu-gzGzoHsz",
+    appKey: "VqwKDqnv8xHuqGxDcgLznrTr",
+    notify: false,
+    verify: false,
+    avatar: "robohash",
+    visitor: true,
+    placeholder: "随便说点什么～.～",
+});</script><div class="copyright"><p>© 2022 <a target="_blank">WT</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <br> and <a href="https://github.com/Bulandent/hexo-theme-bubuzou" target="_blank">bubuzou</a></p><p> <span style="padding-right: 6px;"><a href="https://beian.miit.gov.cn" target="_blank">粤ICP备2021173696号-1</a> </span></p></div><div class="totop"><i></i></div></div></footer><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/jquery-1.8.2.min.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/articleCatalog.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/main.js"></script><script>var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "https://hm.baidu.com/hm.js?134c63b82523c74b6918178f08829cb2"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })();</script><script>const valineAPI = (() => {
+try {
+    AV.init("57HzoSWoa39Fs6z4zhbQ8rsu-gzGzoHsz", "VqwKDqnv8xHuqGxDcgLznrTr");
+} catch(error) {}
+const isExist = (identity) => {
+    identity = identity || getRealPath();
+    let query = new AV.Query('Timer');
+    return new Promise((resolve, reject) => {
+    query.equalTo("identity", identity);
+    query.find().then(results => {
+        resolve(results.length > 0);
+    }, error => reject(error));
+    })
+}
+
+const _get = (identity) => {
+    let query = null;
+    if(identity && identity instanceof Array){
+    let querys = [];
+    for(let i = 0; i < identity.length; ++i) {
+        querys[i] = new AV.Query('Timer');
+        querys[i].equalTo('identity', identity[i]);
+    }
+    query = AV.Query.or.apply(null ,querys);
+    } else {
+    identity = identity || getRealPath();
+    query = new AV.Query("Timer");
+    query.equalTo("identity", identity);
+    }
+
+    return new Promise((resolve, reject) => {
+    query.find()
+    .then(results => resolve(results))
+    .catch(error => reject(error))
+    })
+}
+
+const create = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let Todo = AV.Object.extend('Timer');
+    let todo = new Todo();
+    todo.set("times", 1);
+    todo.set("identity", identity);
+    todo.save().then(res => resolve(true), error => reject(error));
+    })
+}
+
+const update = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let query = new AV.Query('Timer');
+    query.equalTo("identity", identity);
+    query.find().then(todos => {
+        todos.forEach(todo => {
+        todo.set("times", todo.attributes.times + 1);
+        });
+        return AV.Object.saveAll(todos);
+    }).then(todos => resolve(true), error => reject(error));
+    })
+}
+
+return {
+    isExist,
+    _get,
+    update,
+    create
+}
+})()
+
+const calcAndWriteTimes = () => {
+let isPost = true;
+
+let timerAllDOM = document.querySelectorAll(".article-timer");
+
+if(isPost) {
+    let identity = timerAllDOM[0].getAttribute("data-identity");
+    valineAPI.isExist(identity)
+    .then(exist => {
+    if(exist) {
+        return valineAPI.update(identity);
+    }
+    return new Promise(resolve => resolve(true));
+    })
+    .then( succuess => valineAPI._get(identity))
+    .then( result => timerAllDOM[0].innerText = result[0].attributes.times)
+    .catch(error => console.log(error.message))
+    return ;
+}
+
+let timerDOMCache = {};
+
+for(let timerDOM of timerAllDOM) {
+    let identity = timerDOM.getAttribute("data-identity");
+    if(timerDOMCache.hasOwnProperty(identity)){
+    timerDOMCache[identity].dom.push(timerDOM);
+    }else{
+    timerDOMCache[identity] = {
+        dom: [timerDOM],
+        times: undefined
+    };
+    }
+}
+
+let identities = Object.keys(timerDOMCache);
+valineAPI._get(identities).then(results => {
+    for(let result of results) {
+    let {identity, times} = result.attributes;
+    timerDOMCache[identity].times = times;
+    timerDOMCache[identity].dom.map(item => item.innerText = times);
+    }
+    for(let identity of identities) {
+    if(timerDOMCache[identity].times){
+        continue;
+    }
+    timerDOMCache[identity].dom.map(item => item.innerText = 1);
+    valineAPI.create(identity);
+    }
+}).catch(error => console.log(error.message))
+}
+
+if(true){
+calcAndWriteTimes();
+}</script></body></html>
